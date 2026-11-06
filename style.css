@@ -1,0 +1,252 @@
+/* PENGATURAN DASAR */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff8ed;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* HEADER */
+header {
+    background-color: #557c46;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* NAVIGASI */
+nav {
+    background-color: #354f2f;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+}
+
+nav a:hover,
+nav a.aktif {
+    background-color: #e69b42;
+}
+
+/* TEKS BERJALAN */
+.teks-jalan {
+    background-color: #f4d7a1;
+    color: #543c24;
+    padding: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: bergerak 12s linear infinite;
+}
+
+@keyframes bergerak {
+    from {
+        text-indent: 100%;
+    }
+    to {
+        text-indent: -100%;
+    }
+}
+
+/* TATA LETAK */
+.container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 0 15px;
+}
+
+main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+aside {
+    background-color: #f4e5ce;
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content;
+}
+
+/* BANNER */
+.banner {
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.banner-text {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+}
+
+/* PRODUK */
+.produk {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.kartu {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.kartu img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* ARTIKEL */
+.artikel {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+}
+
+.link-artikel {
+    color: #557c46;
+    text-decoration: none;
+}
+
+.link-artikel:hover {
+    text-decoration: underline;
+}
+
+.baca {
+    display: inline-block;
+    background-color: #557c46;
+    color: white;
+    padding: 7px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* HALAMAN */
+.halaman {
+    display: none;
+}
+
+.halaman.aktif {
+    display: block;
+}
+
+/* GALERI */
+.galeri {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+}
+
+.galeri img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* FORMULIR */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+input,
+select,
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    min-height: 100px;
+}
+
+button {
+    background-color: #557c46;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #354f2f;
+}
+
+/* FOOTER */
+footer {
+    background-color: #354f2f;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+footer a {
+    color: #f4d7a1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* TAMPILAN HP */
+@media screen and (max-width: 700px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .produk {
+        grid-template-columns: 1fr;
+    }
+
+    .galeri {
+        grid-template-columns: 1fr;
+    }
+
+    nav a {
+        padding: 10px;
+    }
+
+    .banner img {
+        height: 200px;
+    }
+}
